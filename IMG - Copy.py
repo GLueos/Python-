@@ -1,3 +1,5 @@
+#this is a discord bot I made wich acts as a wrapper for The dreamstudio Ai image generator, so you can use it in discord. To use it just get an api key from dreamstudio and an api key from discord, then configure the files correctly.
+
 import discord
 intents = discord.Intents(messages=True, guilds=True, message_content =True)
 bot = discord.Client(intents=intents)
@@ -32,7 +34,7 @@ async def on_message(message):
                              img = img.save("img.jpg")
                              image = Image.open("img.jpg")
                              image.show()
-                             file = discord.File(r"C:\Users\glueo\Desktop\newproject\img.jpg", filename= "img.jpg")
+                             file = discord.File(r"C:\Users\your-user-name-here\Desktop\make-a-folder-for-the-bot\img.jpg", filename= "img.jpg")
                              await message.channel.send(file=file)
 
 bot.run("Add you discord api key here") 
